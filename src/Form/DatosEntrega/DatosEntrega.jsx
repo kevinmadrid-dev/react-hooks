@@ -1,5 +1,5 @@
-import React from "react";
-import { TextField, Button, Box } from "@mui/material";
+import React from "react"
+import { TextField, Button, Box } from "@mui/material"
 
 const DatosEntrega = () => {
   return (
@@ -10,9 +10,8 @@ const DatosEntrega = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        flexDirection: "column",
-      }}
-    >
+        flexDirection: "column"
+      }}>
       <TextField
         label="Dirección"
         variant="outlined"
@@ -38,7 +37,7 @@ const DatosEntrega = () => {
         Crear cuenta
       </Button>
     </Box>
-  );
-};
+  )
+}
 
-export default DatosEntrega;
+export default DatosEntrega

@@ -1,5 +1,5 @@
-import React from "react";
-import { TextField, Button, Box } from "@mui/material";
+import React from "react"
+import { TextField, Button, Box } from "@mui/material"
 
 const DatosPersonales = () => {
   return (
@@ -10,9 +10,8 @@ const DatosPersonales = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        flexDirection: "column",
-      }}
-    >
+        flexDirection: "column"
+      }}>
       <TextField
         label="Nombre"
         variant="outlined"
@@ -39,7 +38,7 @@ const DatosPersonales = () => {
         Siguiente
       </Button>
     </Box>
-  );
-};
+  )
+}
 
-export default DatosPersonales;
+export default DatosPersonales

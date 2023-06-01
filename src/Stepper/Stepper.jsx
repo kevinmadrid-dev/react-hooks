@@ -1,8 +1,8 @@
-import React from "react";
-import { Box, Stepper, Step, StepLabel } from "@mui/material";
+import React from "react"
+import { Box, Stepper, Step, StepLabel } from "@mui/material"
 
 const StepperComponent = () => {
-  const steps = ["Datos de usuario", "Datos personales", "Datos de entrega"];
+  const steps = ["Datos de usuario", "Datos personales", "Datos de entrega"]
 
   return (
     <Box sx={{ width: "100%" }}>
@@ -14,7 +14,7 @@ const StepperComponent = () => {
         ))}
       </Stepper>
     </Box>
-  );
-};
+  )
+}
 
-export default StepperComponent;
+export default StepperComponent

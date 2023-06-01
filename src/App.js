@@ -1,5 +1,5 @@
 import { MainSpace, ImageSpace, FormSpace } from "./styles"
-import Form from "./Form"
+import Form from "./Form/Form.jsx"
 
 function App() {
   return (

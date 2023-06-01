@@ -1,5 +1,5 @@
-import React from "react";
-import { TextField, Button, Box } from "@mui/material";
+import React from "react"
+import { TextField, Button, Box } from "@mui/material"
 
 class DatosUsuario extends React.Component {
   render() {
@@ -11,9 +11,8 @@ class DatosUsuario extends React.Component {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          flexDirection: "column",
-        }}
-      >
+          flexDirection: "column"
+        }}>
         <TextField
           label="Correo electrónico"
           variant="outlined"
@@ -34,8 +33,8 @@ class DatosUsuario extends React.Component {
           Siguiente
         </Button>
       </Box>
-    );
+    )
   }
 }
 
-export default DatosUsuario;
+export default DatosUsuario
