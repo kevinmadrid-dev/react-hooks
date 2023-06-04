@@ -1,6 +1,6 @@
-import React from "react"
+import React, { useState } from "react"
 import { Box, Typography } from "@mui/material"
-import { LogoSpace, MainSpace, FormSpace, Img } from "./styles"
+import { LogoSpace, FormSpace, Img } from "./styles"
 import DatosUsuario from "./DatosUsuario/DatosUsuario.jsx"
 import DatosPersonales from "./DatosPersonales/DatosPersonales.jsx"
 import DatosEntrega from "./DatosEntrega/DatosEntrega.jsx"
@@ -8,6 +8,19 @@ import Complete from "./Complete/Complete.jsx"
 import Stepper from "../Stepper/Stepper.jsx"
 
 const Form = () => {
+  const [step, setStep] = useState(0)
+
+  const updateStep = (step) => {
+    setStep(step)
+  }
+
+  const steps = {
+    0: <DatosUsuario updateStep={updateStep} />,
+    1: <DatosPersonales updateStep={updateStep} />,
+    2: <DatosEntrega updateStep={updateStep} />,
+    3: <Complete />
+  }
+
   return (
     <Box
       sx={{
@@ -21,9 +34,11 @@ const Form = () => {
       </LogoSpace>
 
       <FormSpace>
-        <DatosUsuario />
-        {/* <DatosPersonales />
+        {step < 3 && <Stepper step={step} />}
+        {/* <DatosUsuario />
+        <DatosPersonales />
         <DatosEntrega /> */}
+        {steps[step]}
       </FormSpace>
     </Box>
   )

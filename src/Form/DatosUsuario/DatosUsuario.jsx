@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 import { TextField, Button, Box } from "@mui/material"
-import { validarEmail, validarPassword } from "./Validaciones"
+import { validarEmail, validarPassword } from "./ValidacionesDU"
 
-const DatosUsuario = () => {
+const DatosUsuario = ({ updateStep }) => {
   const [email, setEmail] = useState({ value: "", valid: true })
   const [password, setPassword] = useState({ value: "", valid: true })
 
@@ -18,10 +18,12 @@ const DatosUsuario = () => {
       }}
       onSubmit={(e) => {
         e.preventDefault()
-        if (email && password == true) {
+        if (email.valid && password.valid) {
           console.log("Avanza")
+          updateStep(1)
         } else {
           console.log("No avanza")
+          updateStep(0)
         }
       }}>
       <TextField
@@ -30,8 +32,8 @@ const DatosUsuario = () => {
         fullWidth
         margin="dense"
         type="email"
-        error={email.valid == false}
-        helperText={email.valid == false && "Ingresa un correo electrónico válido"}
+        error={email.valid === false}
+        helperText={email.valid === false && "Ingresa un correo electrónico válido"}
         value={email.value}
         onBlur={() => {
           validarEmail(email)
@@ -48,8 +50,8 @@ const DatosUsuario = () => {
         fullWidth
         margin="dense"
         type="password"
-        error={password.valid == false}
-        helperText={password.valid == false && "Ingresa una contraseña válida"}
+        error={password.valid === false}
+        helperText={password.valid === false && "Ingresa una contraseña válida"}
         value={password.value}
         onChange={(input) => {
           const password = input.target.value
