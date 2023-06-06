@@ -1,29 +1,14 @@
-export const validarName = (name) => {
-  const length = name.length
-
-  if (length >= 3 && length < 15) {
-    return true
-  } else {
-    return false
-  }
+export const validarName = (nombre) => {
+  const length = nombre.length
+  return length > 1 && length < 30 ? true : false
 }
 
-export function validarLastName(lastName) {
-  const length = lastName.length
-
-  if (length >= 3 && length < 15) {
-    return true
-  } else {
-    return false
-  }
+export const validarLastName = (apellidos) => {
+  const length = apellidos.length
+  return length > 1 && length < 50 ? true : false
 }
 
-export function validarPhone(phone) {
-  const length = phone.length
-
-  if (length >= 9 && length < 15) {
-    return true
-  } else {
-    return false
-  }
+export const validarPhone = (telefono) => {
+  const length = telefono.length
+  return length >= 8 && length <= 14 ? true : false
 }

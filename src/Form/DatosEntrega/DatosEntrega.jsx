@@ -1,11 +1,11 @@
 import React, { useState } from "react"
 import { TextField, Button, Box } from "@mui/material"
-import { validarAddress, validarCity, validarEstado } from "./ValidacionesDE"
+import { validarInput } from "./ValidacionesDE.js"
 
 const DatosEntrega = ({ updateStep }) => {
-  const [address, setAddress] = useState({ value: "", valid: true })
-  const [city, setCity] = useState({ value: "", valid: true })
-  const [estado, setEstado] = useState({ value: "", valid: true })
+  const [address, setAddress] = useState({ value: "", valid: null })
+  const [city, setCity] = useState({ value: "", valid: null })
+  const [province, setProvince] = useState({ value: "", valid: null })
 
   return (
     <Box
@@ -19,13 +19,8 @@ const DatosEntrega = ({ updateStep }) => {
       }}
       onSubmit={(e) => {
         e.preventDefault()
-        if (address.valid && city.valid && estado.valid) {
-          console.log("Avanza")
-          updateStep(3)
-        } else {
-          console.log("No avanza")
-          updateStep(2)
-        }
+        updateStep(3)
+        console.log(address, city, province)
       }}>
       <TextField
         label="Dirección"
@@ -33,16 +28,14 @@ const DatosEntrega = ({ updateStep }) => {
         fullWidth
         margin="dense"
         type="text"
-        error={address.valid === false}
-        helperText={address.valid === false && "Ingresa una dirección válida"}
         value={address.value}
-        onBlur={() => {
-          validarAddress(address)
-        }}
         onChange={(input) => {
-          const address = input.target.value
-          setAddress({ value: input.target.value, valid: validarAddress(address) })
+          const value = input.target.value
+          const valid = validarInput(value)
+          setAddress({ value, valid })
         }}
+        error={address.valid === false}
+        helperText={address.valid === false && "Ingresa al menos 4 caracteres."}
       />
 
       <TextField
@@ -51,16 +44,14 @@ const DatosEntrega = ({ updateStep }) => {
         fullWidth
         margin="dense"
         type="text"
-        error={city.valid === false}
-        helperText={city.valid === false && "Ingresa una ciudad válida"}
         value={city.value}
-        onBlur={() => {
-          validarCity(city)
-        }}
         onChange={(input) => {
-          const city = input.target.value
-          setCity({ value: input.target.value, valid: validarCity(city) })
+          const value = input.target.value
+          const valid = validarInput(value)
+          setCity({ value, valid })
         }}
+        error={city.valid === false}
+        helperText={city.valid === false && "Ingresa al menos 4 caracteres."}
       />
 
       <TextField
@@ -69,16 +60,14 @@ const DatosEntrega = ({ updateStep }) => {
         fullWidth
         margin="dense"
         type="text"
-        error={estado.valid === false}
-        helperText={estado.valid === false && "Ingresa un estado o provincia válida"}
-        value={estado.value}
-        onBlur={() => {
-          validarEstado(estado)
-        }}
+        value={province.value}
         onChange={(input) => {
-          const estado = input.target.value
-          setEstado({ value: input.target.value, valid: validarEstado(estado) })
+          const value = input.target.value
+          const valid = validarInput(value)
+          setProvince({ value, valid })
         }}
+        error={province.valid === false}
+        helperText={province.valid === false && "Ingresa al menos 4 caracteres."}
       />
 
       <Button variant="contained" type="submit">
