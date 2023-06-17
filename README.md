@@ -1,7 +1,7 @@
 # React - Hooks
 
 ## 📦 Sobre el repositorio
-Cuarto proyecto de la librería React
+Cuarto proyecto de React, proyecto en el cual desarrollaremos una app estilo login para el ingreso y validación de datos en etapas o steppers.
 
 ## ✔️ [El respositorio aquí](https://github.com/K3yJey/react-hooks.git)
 
@@ -12,7 +12,7 @@ Cuarto proyecto de la librería React
 * ![React](https://img.shields.io/badge/React-100000?style=for-the-badge&logo=React&logoColor=00dafc&labelColor=222222&color=222222)
 
 ## 📌 Comentarios adicionales 
-Proyecto en progreso.
+Proyecto culminado.
 
 ## ⚙️ Comandos necesarios para la creación de la app React
 ``` console 
@@ -61,7 +61,7 @@ serve -s build
 ↑ Ejecuta el servidor.
 
 ## ▶️ Deploy de app
-* Vercel => [Org Page](https://github.com/K3yJey/react-hooks.git)
+* Vercel => [Org Page](https://react-hooks-k3yjey.vercel.app/)
 
 ## 💻 Contacto
 * Linkedin => [Clic aquí](https://www.linkedin.com/in/k3yjey-dev/)
