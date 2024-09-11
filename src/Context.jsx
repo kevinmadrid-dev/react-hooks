@@ -14,5 +14,7 @@ export const CounterProvider = ({ children }) => {
     }
   }
 
-  return <CounterContext.Provider value={values}>{children}</CounterContext.Provider>
+  return (
+    <CounterContext.Provider value={values}>{children}</CounterContext.Provider>
+  )
 }

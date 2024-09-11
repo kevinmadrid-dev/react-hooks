@@ -1,6 +1,6 @@
 {
   "short_name": "React App",
-  "name": "Create React App Sample",
+  "name": "App web login and data validation with steppers.",
   "icons": [
     {
       "src": "favicon.ico",

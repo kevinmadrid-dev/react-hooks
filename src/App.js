@@ -12,7 +12,6 @@ function App() {
       <ImageSpace />
       <FormSpace>
         <Form />
-
         <Button onClick={() => counterData.resta()}> - </Button>
         <Button onClick={() => counterData.suma()}> + </Button>
       </FormSpace>

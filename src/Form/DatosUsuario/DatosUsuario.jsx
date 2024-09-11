@@ -29,6 +29,7 @@ const DatosUsuario = ({ updateStep }) => {
           console.log("No hacer nada")
         }
       }}>
+
       <TextField
         label="Correo electrónico"
         variant="outlined"
@@ -36,7 +37,9 @@ const DatosUsuario = ({ updateStep }) => {
         margin="dense"
         type="email"
         error={email.valid === false}
-        helperText={email.valid === false && "Ingresa un correo electrónico válido."}
+        helperText={
+          email.valid === false && "Ingresa un correo electrónico válido."
+        }
         value={email.value}
         onChange={(input) => {
           const email = input.target.value
@@ -44,6 +47,7 @@ const DatosUsuario = ({ updateStep }) => {
           setEmail({ value: email, valid: valido })
         }}
       />
+
       <TextField
         label="Contraseña"
         variant="outlined"
@@ -61,6 +65,7 @@ const DatosUsuario = ({ updateStep }) => {
           setPassword({ value: password, valid: validarPassword(password) })
         }}
       />
+      
       <Button variant="contained" type="submit">
         Siguiente
       </Button>

@@ -21,6 +21,7 @@ const DatosPersonales = ({ updateStep }) => {
         e.preventDefault()
         updateStep(2)
       }}>
+        
       <TextField
         label="Nombre"
         variant="outlined"
