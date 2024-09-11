@@ -1,4 +1,4 @@
-# App Web React
+# React - Login data validation
 
 ### Description
 
@@ -33,8 +33,8 @@ npm i tar
 
 ### App deploy
 
-[Login react in Vercel](https://login-react-kevinmadrid-dev-projects.vercel.app/)
+[Login react in Vercel]()
 
 ### Developer contact
 
-[LinkedIn](https://www.linkedin.com/in/k3yjey-dev/)
+[LinkedIn](https://www.linkedin.com/in/kevinmadrid-dev/)
